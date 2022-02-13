@@ -1,0 +1,105 @@
+body
+    margin: 0
+    background-color: rgb(49,9,121)
+    background: linear-gradient(90deg, rgba(49,9,121,1) 0%, rgba(0,212,255,1) 100%)
+    font-family: 'Oswald', sans-serif
+    color: rgb(255,255,255)
+
+// screen shape
+.desktop-top-row
+    grid-row: 1
+    grid-column-start: 1
+    grid-column-end: 4
+
+.desktop-grid
+    grid-template-columns: 2fr 1fr 2fr
+    grid-template-rows: 25% 50% 25%
+
+.mobile-grid
+    grid-template-rows: auto auto auto auto
+    grid-template-columns: 1fr
+
+#grid
+    display: grid
+    justify-items: center
+    align-items: center
+    height: 100vh
+
+#title-cont
+   text-align: center
+
+#title
+    font-size: 10vh
+    color: rgb(255, 255, 255)
+
+#btn
+    background: rbga(0,0,0,0)
+    border: none
+
+.input_box_c
+    text-align: center
+
+.cinput
+    height: 8vh
+    width: 75%
+    background-color: #196cbb 
+    padding: 1vh
+    color: white
+    font-size: 6vh
+    border: none
+    border-radius: 2vh
+
+.toolip 
+    visibility: hidden
+    display: inline-block
+    position: fixed 
+    top: 37vh
+    right: 20vw
+    padding: 1vh
+    text-align: center
+    font-size: 2vh
+    height: fit-content
+    width: fit-content
+    background: #5167e200
+    color: rgba(255, 255, 255, 0)
+    z-index: 1
+    border-radius: 2vh
+    transition: 0.5s ease-in-out;
+
+#output_box:hover > .toolip
+    visibility: visible
+    color: rgb(255, 255, 255)
+    background: #11218077
+
+.toolip.fadeOut
+    transition-duration: 1s
+    visibility: hidden
+    color: rgba(255, 255, 255, 0)
+    background: #11228000
+
+
+#arrow
+    color: white
+    height: 10vh
+    font-size: 10vh
+    margin: auto
+    transition-duration: 1s
+
+#arrow:hover
+    color: #82b0db
+
+@keyframes toolipIn 
+    0% 
+        visibility: visible
+        color: rgba(255, 255, 255, 0)
+        background: #11228000
+
+    25%
+        background: #11228033
+        color: rgba(255, 255, 255, 0)
+
+    75%
+        background: #1122808f
+    
+    100%
+        color: rgb(255, 255, 255)
