@@ -27,22 +27,29 @@ const getBaseLog = (base, num) => {
 const changeMobile = () => {
     let width = visualViewport.width;
     const grid = document.getElementById('grid');
+    const toolip = document.getElementById('toolip')
 
     if (width > 600){
-        grid.classList.add('desktop-grid');
         document.getElementById('title-cont').classList.add('desktop-top-row');
+
+        grid.classList.add('desktop-grid');
         grid.classList.remove('mobile-grid');
 
-        //Make arrow point down
+        toolip.classList.add('desktop-toolip');
+        toolip.classList.remove('mobile-toolip');
+
         document.getElementById('arrow').classList.remove('fa-angle-down');
         document.getElementById('arrow').classList.add('fa-angle-right');
     }
     else {
-        grid.classList.add('mobile-grid');
-        grid.classList.remove('desktop-grid');
         document.getElementById('title-cont').classList.remove('desktop-top-row');
 
-        //Make arrow point up
+        grid.classList.remove('mobile-grid');
+        grid.classList.add('desktop-grid');
+
+        toolip.classList.remove('desktop-toolip');
+        toolip.classList.add('mobile-toolip');
+
         document.getElementById('arrow').classList.remove('fa-angle-right');
         document.getElementById('arrow').classList.add('fa-angle-down');
     }
@@ -104,5 +111,5 @@ document.addEventListener('resize', changeMobile);
 document.getElementById('input').addEventListener('input', liveUpdate);
 
 window.onresize = changeMobile;
-changeMobile();
 randomEmoji();
+changeMobile();

@@ -16,10 +16,10 @@ body {
 }
 
 .desktop-grid {
-  -ms-grid-columns: 2fr 1fr 2fr;
-      grid-template-columns: 2fr 1fr 2fr;
   -ms-grid-rows: 25% 50% 25%;
       grid-template-rows: 25% 50% 25%;
+  -ms-grid-columns: 2fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 2fr;
 }
 
 .mobile-grid {
@@ -37,6 +37,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+}
+
+.mobile-toolip {
+  top: 76vh;
+  right: 40vw;
+}
+
+.desktop-toolip {
+  top: 42vh;
+  right: 10vw;
 }
 
 #title-cont {
@@ -72,8 +82,6 @@ body {
   visibility: hidden;
   display: inline-block;
   position: fixed;
-  top: 37vh;
-  right: 20vw;
   padding: 1vh;
   text-align: center;
   font-size: 2vh;

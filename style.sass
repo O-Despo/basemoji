@@ -12,8 +12,8 @@ body
     grid-column-end: 4
 
 .desktop-grid
-    grid-template-columns: 2fr 1fr 2fr
     grid-template-rows: 25% 50% 25%
+    grid-template-columns: 2fr 1fr 2fr
 
 .mobile-grid
     grid-template-rows: auto auto auto auto
@@ -24,6 +24,14 @@ body
     justify-items: center
     align-items: center
     height: 100vh
+
+.mobile-toolip
+    top: 76vh
+    right: 40vw
+
+.desktop-toolip
+    top: 42vh
+    right: 10vw
 
 #title-cont
    text-align: center
@@ -53,8 +61,6 @@ body
     visibility: hidden
     display: inline-block
     position: fixed 
-    top: 37vh
-    right: 20vw
     padding: 1vh
     text-align: center
     font-size: 2vh
